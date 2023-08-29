@@ -1,5 +1,6 @@
 package ma.odm.Manager.Model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
@@ -25,6 +26,7 @@ public class Doctor implements Serializable {
     @Column(length = 60)
     private String Fname;
     @Temporal(TemporalType.DATE)
+    @JsonFormat(pattern="dd-MM-yyyy")
     private Date Birth;
     @Column(length = 60, unique = true)
     private String Email;

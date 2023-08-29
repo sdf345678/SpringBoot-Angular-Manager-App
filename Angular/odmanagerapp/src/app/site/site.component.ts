@@ -6,6 +6,7 @@ import { SiteService } from './site.service';
 export interface Site{
   id: number;
   address: string;
+  code: String;
   services: string[];
   name: string;
 }
