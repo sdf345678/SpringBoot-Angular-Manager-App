@@ -29,4 +29,15 @@ export class AppComponent implements OnInit {
       }
     );
   }
+
+  public onOpenModal(patient: Patient | null): void {
+    const container = document.getElementById('nav')
+    const button=document.createElement('button');
+    button.type = 'button';
+    //button.style.display= 'none';
+    button.setAttribute('data-toggle','modal');
+    button.setAttribute('data-target','#addPatient');
+    container?.appendChild(button);
+    button.click();
+  }
 }
